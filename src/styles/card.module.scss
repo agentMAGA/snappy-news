@@ -1,0 +1,111 @@
+.newsCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 300px;
+    height: 180px;
+    background-image: url('/news.png');
+    background-size: cover;
+
+    border-radius: 40px;
+    margin: 0;
+    padding: 0;
+
+
+    .newsCardLeft {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #0039C7;
+      padding: 10px;
+      margin: 0;
+      width: 300px;
+      height: 160px;
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+      white-space: wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+
+      .newsCardText {
+        
+        
+        margin: 0;
+        padding: 0;
+        margin-top: 15px;
+        
+
+        h6 {
+          font-size: 28px;
+          
+          margin: 0;
+          padding: 0;
+
+          /* Обрезка заголовка после 2 строк с многоточием */
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* Количество строк для заголовка */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-height: 48px; /* Подберите под ваш дизайн */
+        }
+
+        p {
+          font-size: 10px;
+          text-align: justify;
+          margin: 0;
+          padding: 0;
+
+          /* Обрезка текста после 3 строк с многоточием */
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-height: 40px; /* Можно скорректировать под ваш дизайн */
+        }
+      }
+
+      .newsCardButton {
+        display: flex;
+        padding: 0 20px 20px 0;
+
+
+        .button {
+
+          button {
+            width: 80px;
+            height: 30px;
+            border: none;
+            background-color: #ADFF00;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+        }
+
+        .like {
+          
+
+          img {
+            cursor: pointer;
+            width: 80px;
+            height: 30px;
+          }
+        }
+
+      }
+
+    }
+
+    .newsCardRight {
+      width: 100px;
+      height: 180px;
+      border-radius: 40px;
+
+    }
+
+  }

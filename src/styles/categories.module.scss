@@ -1,0 +1,58 @@
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 150px;
+    font-size: clamp(32px, 8vw, 150px);
+}
+
+.news {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 60px;
+    width: 100%;
+    max-width: 1140px;
+    height: 100%;
+    border-radius: 90px;
+
+    .newsContent {
+        margin: 50px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: black;
+
+
+
+            
+
+
+            .card {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 300px;
+                flex: 1 1 300px;
+                height: 180px;
+                border: black solid 2px;
+                border-radius: 40px;
+                margin: 0;
+                padding: 0 40px 0 40px;
+                font-size: 40px;
+                gap: 15px;
+                text-decoration: none;
+                color: black;
+
+            }
+        
+    }
+
+
+
+}
