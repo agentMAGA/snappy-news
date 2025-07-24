@@ -5,6 +5,7 @@ import Home from './components/home';
 import Categories from './components/categories/categories';
 import useCart from './hooks/useCard';
 import CategoryPage from './components/categories/categoryPage';
+import Favorites from './components/favorites';
 
 
 
@@ -38,6 +39,7 @@ function App() {
 
           <Route path="/categories" element={<Categories />} exact />
           <Route path="/categories/:category" element={<CategoryPage />} />
+          <Route path='/favorites' element={<Favorites/>} exact/>
 
 
         </Routes>

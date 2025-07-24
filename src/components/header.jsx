@@ -42,10 +42,13 @@ function Header({onSearchValue, searchValue}) {
 
                 </NavLink>
 
+                <NavLink to="/favorites"
+                className={({ isActive }) => isActive ? styles.active : styles.favorites}>
                 <div className={styles.favorites}>
-                    <img src='/img/favorites.svg'></img>
+                    <img src='/img/favoritesDef.svg'></img>
                     <p>Избранные</p>
-                </div>
+                </div>                
+                </NavLink>
 
             </div>
 
