@@ -118,4 +118,44 @@
       }
     }
   }
+
+  .mobileActions {
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 5px;
+    gap: 16px;
+    justify-content: space-around;
+
+    .headerLogo{
+      img{
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+      }
+    }
+
+
+    .headerSearch,
+    .headerButton {
+      display: none;
+    }
+
+
+    .mobileActions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./card";
-import styles from "../styles/favorites.module.scss";
+import styles from "../styles/home.module.scss";
 import { useFavoritesStore } from "../store/useCounterStore";
 
 

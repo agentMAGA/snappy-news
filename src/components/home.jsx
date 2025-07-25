@@ -2,13 +2,15 @@ import React from "react";
 import styles from "../styles/home.module.scss";
 import Card from './card';
 import { useNewsStore } from '../store/useCounterStore';
+import useCard from "../store/useAppStore";
 
-function Home({searchValue}) {
+function Home() {
 
     const { news, fetchNews } = useNewsStore();
+    const { searchValue } = useCard();
 
     React.useEffect(() => {
-        fetchNews({queries:""});
+        fetchNews({ queries: "" });
     }, []);
 
     return (
@@ -16,9 +18,9 @@ function Home({searchValue}) {
         <>
             <div className={styles.heading}>
                 <h6>{searchValue
-                        ? `Поиск по запросу: ${searchValue}`
-                        : <>НОВОСТИ</>
-                    }</h6>
+                    ? `Поиск по запросу: ${searchValue}`
+                    : <>НОВОСТИ</>
+                }</h6>
             </div>
 
             <div className={styles.news}>
@@ -33,9 +35,9 @@ function Home({searchValue}) {
                 <div className={styles.newsContent}>
 
                     {news.filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
-                    .map((item) => (
-                        <Card key={item.id} item={item} />
-                    ))}
+                        .map((item) => (
+                            <Card key={item.id} item={item} />
+                        ))}
 
                 </div>
 
