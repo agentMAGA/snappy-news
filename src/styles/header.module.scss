@@ -15,52 +15,7 @@
   justify-content: space-between;
   gap: 40px;
 
-  .headerSearch {
-    display: flex;
-    align-items: center;
-    border: #ffffff solid 1px;
-    border-radius: 5px;
-
-
-    .headerSearchInput {
-
-      input {
-        color: #ffffff;
-        border: none;
-        height: 50px;
-        width: 505px;
-        font-size: 18px;
-        padding: 0 10px;
-
-
-        &::placeholder {
-          color: white;
-          opacity: 1;
-        }
-
-      }
-
-      input,
-      input:focus {
-        background: transparent;
-        outline: none;
-
-      }
-    }
-
-    .headerInputImg {
-      border-left: #ffffff solid 1px;
-      padding: 13px;
-
-      img {
-
-        width: 20px;
-        height: 20px;
-        margin: 0;
-        padding: 0;
-      }
-    }
-  }
+  
 
   .headerButton {
     display: flex;
@@ -125,8 +80,9 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .header {
+    width: 100%;
     padding: 5px;
     gap: 16px;
     justify-content: space-around;
@@ -140,7 +96,7 @@
     }
 
 
-    .headerSearch,
+
     .headerButton {
       display: none;
     }

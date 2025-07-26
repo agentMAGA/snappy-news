@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "../../styles/header.module.scss"
 import Search from "./search";
+import SearchMob from "./searchMob";
 import { Link, NavLink } from "react-router-dom";
 import useAppStore from "../../store/useAppStore";
 
 
 function Header() {
 
-    const {openMenu} = useAppStore();
+    const {openMenu , openSearch , searchOpen} = useAppStore();
 
 
 
@@ -44,7 +45,8 @@ function Header() {
             </div>
 
             <div className={styles.mobileActions}>
-                <img src="/img/searchMob.svg" alt="Search"  />
+                <img src="/img/searchMob.svg" alt="Search"  onClick={openSearch} style={searchOpen ? {display:"none"} : {display:"block"}}/>
+                <SearchMob/>
                 <img src="/img/menu.svg" alt="Menu" onClick={openMenu} />
             </div>
 

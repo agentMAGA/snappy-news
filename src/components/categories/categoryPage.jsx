@@ -26,7 +26,7 @@ function CategoryPage() {
   return (
     <>
       <div className={styles.heading}>
-        <h6>{categoryNames[category] || "Новости"}</h6>
+        <h6>{categoryNames[category] || "Ничего не найдено:("}</h6>
       </div>
 
       <div className={styles.news}>

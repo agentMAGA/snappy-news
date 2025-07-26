@@ -1,6 +1,6 @@
 import React from "react";
 import useAppStore from '../../store/useAppStore';
-import styles from "../../styles/header.module.scss"
+import styles from "../../styles/search.module.scss"
 
 
 

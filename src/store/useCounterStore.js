@@ -1,17 +1,18 @@
 import { create } from 'zustand';
 import axios from 'axios';
-import favorites from '../components/favorites';
 
 export const useNewsStore = create((set) => ({
   news: [],
+  isLoading: false,
 
   fetchNews: async ({ query }) => {
     try {
+      set({ isLoading: true });
       const res = await axios.get("https://newsapi.org/v2/top-headlines", {
         params: {
           q: query,
           country: "us",
-          sortby: "popularity",
+          sortBy: "popularity",
           apiKey: "0c13cdcbef204accae08c1725be97c20",
           pageSize: 30
         }
@@ -21,12 +22,12 @@ export const useNewsStore = create((set) => ({
 
     } catch (error) {
       console.error("Ошибка загрузки новостей:", error);
+    } finally {
+      set({ isLoading: false });
     }
   }
+}));
 
-}
-
-));
 
 export const useFavoritesStore = create((set) => ({
   favorites: [],

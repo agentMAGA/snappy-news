@@ -1,0 +1,45 @@
+.headerSearchMob {
+    display: flex;
+    align-items: center;
+    border: #ffffff solid 1px;
+    border-radius: 5px;
+
+    .headerInputMob {
+
+        input {
+            color: #ffffff;
+            border: none;
+            height: 25px;
+            width: 50%;
+            font-size: 18px;
+            padding: 0 10px;
+
+
+            &::placeholder {
+                color: white;
+                opacity: 1;
+            }
+
+        }
+
+        input,
+        input:focus {
+            background: transparent;
+            outline: none;
+
+        }
+    }
+
+    .headerInputImg {
+        border-left: #ffffff solid 1px;
+        padding: 13px;
+
+        img {
+
+            width: 20px;
+            height: 15px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
